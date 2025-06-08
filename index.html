@@ -134,19 +134,26 @@
     }
   </style>
   <style>
-  /* ...existing styles... */
+.irritator-buttons {
+  position: relative;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
 
-  #irritatorYes, #irritatorNo {
-    font-size: 1.4rem;
-    padding: 1rem 2rem;
-    background-color: #ff69b4;
-    color: white;
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-    position: absolute;
-    z-index: 10001;
-    transition: all 0.3s ease;
+#irritatorYes, #irritatorNo {
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  z-index: 10001;
+  position: relative; /* important to avoid absolute stacking */
+  transition: all 0.3s ease;
+}
   }
 </style>
 </head>
@@ -242,8 +249,10 @@
         <div id="finalQuestion" style="margin-top: 1rem;">
   <p style="font-size: 1.4rem; font-weight: bold; margin-bottom: 1rem;">Will you let me be your forever irritator? 😝</p>
   <div style="display: flex; gap: 1rem; align-items: center;">
+    <div class="irritator-buttons">
     <button id="irritatorYes" style="padding: 0.5rem 1rem; border-radius: 1rem; background: #ff9a9e; border: none; color: white; font-size: 1rem; cursor: pointer;">Yes</button>
     <button id="irritatorNo" style="padding: 0.5rem 1rem; border-radius: 1rem; background: #fad0c4; border: none; color: white; font-size: 1rem; position: absolute; cursor: pointer;">No</button>
+    </div>
   </div>
 </div>
 
