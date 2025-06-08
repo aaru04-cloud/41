@@ -303,7 +303,9 @@ const finalVideo = document.getElementById("finalVideo");
 irritatorYes.addEventListener("click", () => {
   finalVideo.style.display = "block";
 });
-
+  
+document.getElementById("irritatorNo").addEventListener("mouseover", moveIrritatorNo);
+document.getElementById("irritatorNo").addEventListener("click", moveIrritatorNo);
 function moveIrritatorNo() {
   const btn = irritatorNo;
   const x = Math.random() * (window.innerWidth - btn.offsetWidth - 40);
